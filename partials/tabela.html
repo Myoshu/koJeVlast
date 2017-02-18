@@ -20,67 +20,95 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.13/css/dataTables.bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css">
+
+    <link rel="stylesheet" type="text/css" href="../static/style-index.css">
 </head>
 
 <body>
-    <table id="data" class="table table-striped table-bordered" cellspacing="0" width="100%">
-        <thead>
-            <th>Id</th>
-            <th>Titula</th>
-            <th>Ime i prezime</th>
-            <th>Stranka</th>
-            <th>Funkcija</th>
-            <th>Koalicija</th>
-            <th>Opstina</th>
-            <th>Datum od</th>
-            <th>Datum do</th>
-            <th>U vlasti</th>
-            <th>Kolona_dodatna</th>
-        </thead>
-        <tfoot>
-            <th>Id</th>
-            <th>Titula</th>
-            <th>Ime i prezime</th>
-            <th>Stranka</th>
-            <th>Funkcija</th>
-            <th>Koalicija</th>
-            <th>Opstina</th>
-            <th>Datum od</th>
-            <th>Datum do</th>
-            <th>U vlasti</th>
-            <th>Kolona_dodatna</th>
-        </tfoot>
-    </table>
-    <script>
-    $(document).ready(function() {
-        $('#data').DataTable({
-        	"processing": true,
-            dom: 'Bfrtip',
-            buttons: [
-                'copyHtml5',
-                'excelHtml5',
-                'csvHtml5',
-                'pdfHtml5'
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><!-- Ko je na vlasti ikonica --></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="../index.html">Početna</a></li>
+                    <!-- <li><a href="partials/uporedjivanje.html">Upoređivanje opstina</a></li> -->
+                    <li class="active"><a href="tabela.html">Tabele sa podacima</a></li>
+                    <li class="prijavi"><a href="../posaljitePromenu.html">Prijavi promenu</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+    <section class="container">
+        <table id="data" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <thead>
+                <th>Id</th>
+                <th>Titula</th>
+                <th>Ime i prezime</th>
+                <th>Stranka</th>
+                <th>Funkcija</th>
+                <th>Koalicija</th>
+                <th>Opstina</th>
+                <th>Datum od</th>
+                <th>Datum do</th>
+                <th>U vlasti</th>
+                <th>Kolona_dodatna</th>
+            </thead>
+            <tfoot>
+                <th>Id</th>
+                <th>Titula</th>
+                <th>Ime i prezime</th>
+                <th>Stranka</th>
+                <th>Funkcija</th>
+                <th>Koalicija</th>
+                <th>Opstina</th>
+                <th>Datum od</th>
+                <th>Datum do</th>
+                <th>U vlasti</th>
+                <th>Kolona_dodatna</th>
+            </tfoot>
+        </table>
+        <script>
+        $(document).ready(function() {
+            $('#data').DataTable({
+            	"processing": true,
+                dom: 'Bfrtip',
+                buttons: [
+                    'copyHtml5',
+                    'excelHtml5',
+                    'csvHtml5',
+                    'pdfHtml5'
+                ],
+                "ajax": '../data/dataTables.json',
+                columns: [
+                
+                 { data: "oid"},
+    			 { data: "titula"},
+    			 { data: "ime_prezime"},
+    			 { data: "stranka"},
+    			 { data: "funkcija"},
+    			 { data: "koalicija"},
+    			 { data: "opstina"},
+    			 { data: "datod"},
+    			 { data: "datdo"},
+    			 { data: "u_vlasti"},
+    			 { data: "kolona_dodatna"}
             ],
-            "ajax": '../data/dataTables.json',
-            columns: [
-            
-             { data: "oid"},
-			 { data: "titula"},
-			 { data: "ime_prezime"},
-			 { data: "stranka"},
-			 { data: "funkcija"},
-			 { data: "koalicija"},
-			 { data: "opstina"},
-			 { data: "datod"},
-			 { data: "datdo"},
-			 { data: "u_vlasti"},
-			 { data: "kolona_dodatna"}
-        ],
 
+            });
         });
-    });
-    </script>
+        </script>
+    </section>
 </body>
 
 </html>

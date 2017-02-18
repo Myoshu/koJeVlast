@@ -117,19 +117,18 @@ $("#mapa").load("srbija.svg", function() {
 
     mouseEvents(selektor);
 
-    $("#mapa").prepend("<button class='prijavi btn btn-lg btn-danger'>Prijavi promenu</button>")
+    //$("#mapa").prepend("<button class='prijavi btn btn-lg btn-danger'>Prijavi promenu</button>")
 
     /*  $("#juzna_i_istocna_srbija_1>g").hide()
       $("#zapadna_backa_2>g").hide()
       */
 
-    $(".prijavi").click(function() {
+    /*$(".prijavi").click(function() {
 
         var url =  "./posaljitePromenu.html";
         var win = window.open(url, '_blank');
         win.focus();
-
-    })
+    })*/
 
     initOpstine();
     initStranka();

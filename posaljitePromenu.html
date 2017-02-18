@@ -5,104 +5,136 @@
     <meta charset="UTF-8">
     <title>Pošaljite promenu</title>
 
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     
     <link rel="stylesheet" href="http://kojenavlasti.rs/admin/css/font-awesome-4.3.0.css" type="text/css">
     <link rel="stylesheet" href="http://kojenavlasti.rs/admin/css/font-starcraft.css" type="text/css">
-    <link rel="stylesheet" href="http://kojenavlasti.rs/admin/css/bootstrap-3.3.2.css" type="text/css">
+    
+   <!--  <link rel="stylesheet" href="http://kojenavlasti.rs/admin/css/bootstrap-3.3.2.css" type="text/css">
     <link rel="stylesheet" href="http://kojenavlasti.rs/admin/css/bootstrap-modal-bs3patch.css" type="text/css">
-    <link rel="stylesheet" href="http://kojenavlasti.rs/admin/css/bootstrap-modal.css" type="text/css">
+    <link rel="stylesheet" href="http://kojenavlasti.rs/admin/css/bootstrap-modal.css" type="text/css"> -->
     <link rel="stylesheet" href="http://kojenavlasti.rs/admin/css/lib/metisMenu.css" type="text/css">
-    <link rel="stylesheet" href="http://kojenavlasti.rs/admin/css/bootstrap-custom.css" type="text/css">
-    <link rel="stylesheet" href="http://kojenavlasti.rs/admin/css/bootstrap-switch.css" type="text/css">
-    <link rel="stylesheet" href="http://kojenavlasti.rs/admin/css/tablesorter/theme.bootstrap.css" type="text/css">
+  <!--   <link rel="stylesheet" href="http://kojenavlasti.rs/admin/css/bootstrap-custom.css" type="text/css">
+    <link rel="stylesheet" href="http://kojenavlasti.rs/admin/css/bootstrap-switch.css" type="text/css"> -->
+    <!-- <link rel="stylesheet" href="http://kojenavlasti.rs/admin/css/tablesorter/theme.bootstrap.css" type="text/css"> -->
     <link rel="stylesheet" href="http://kojenavlasti.rs/admin/css/tablesorter/jquery.tablesorter.pager.css" type="text/css">
     <link rel="stylesheet" href="http://kojenavlasti.rs/admin/css/select2/select2.css" type="text/css">
-    <link rel="stylesheet" href="http://kojenavlasti.rs/admin/css/select2/select2-bootstrap.css" type="text/css">
-    <link rel="stylesheet" href="http://kojenavlasti.rs/admin/css/bootstrapradio.css" type="text/css">
+   <!--  <link rel="stylesheet" href="http://kojenavlasti.rs/admin/css/select2/select2-bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="http://kojenavlasti.rs/admin/css/bootstrapradio.css" type="text/css"> -->
     <link rel="stylesheet" href="http://kojenavlasti.rs/admin/css/timeline.css" type="text/css">
     <link rel="stylesheet" href="http://kojenavlasti.rs/admin/css/lib/morris.css" type="text/css">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" type="text/css">
     <link rel="stylesheet" href="http://kojenavlasti.rs/admin/css/xcustom.css" type="text/css">
+
+    <!-- bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="static/style-index.css">
 </head>
 
 <body>
-    <div id="formpage" style="width: 80%; margin: 0 auto;">
-        <h3>Pošalji promenu</h3>
-        <p>Koristeci ovu formu mozete poslati zahtev za promenu odredjen informacije <b>ukoliko smatrate da ona nije istinita</b>.</p>
-        <p>Prilikom slanja zahteva molimo vas da obavezno obratite paznju na sledece</p>
-        <p>
-            <ul>
-                <li>Obavezno ostavite <b>e-mail adresu</b> ukoliko zelite da vas obavestimo o uspesnoj promeni</li>
-                <li>Obavezno navedite <b>osobu ili stranku</b> na koju se promena odnosi kao i <b>opstinu</b> na kojoj je potrebno izvsriti promenu</li>
-                <li>Obavezno navedite link ili mesto na kome mozemoda verifikujemo promenu. <b>Bez verifikacije ni jedna promena nece biti izvrsena</b>.</li>
-            </ul>
-            <b>Zahvaljujemo vam na vasoj posvecenosti</b>
-        </p>
-        <div id="form-alerts"></div>
-        <div id="userfrosting-alerts"></div>
-        <form name="posaljiPromenuForm" method="post" id="posaljiPromenuForm" action="">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="form-group">
-                        <b>Vaš predlog je u vezi sa (unesite ime osobe ili stranke)*</b>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-edit"></i></span>
-                            <input type="text" class="form-control" id="akter" name="akter" autocomplete="off" value="Petar" placeholder="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12">
-                    <div class="form-group">
-                        <b>Na opštini? (unesite opštinu na kojoj deluje osoba ili stranka)* </b>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-edit"></i></span>
-                            <input type="text" class="form-control" id="opstina" name="opstina" autocomplete="off" value="Mladenovac" placeholder="Opština">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12">
-                    <div class="form-group">
-                        <b>Vasa e-mail adresa*</b>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-edit"></i></span>
-                            <input type="text" class="form-control" id="email" name="email" autocomplete="off" value="trt@mrt.com" placeholder="E-mail">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12">
-                    <div class="form-group">
-                        <b>Promena koju ste primetili (npr. Članovi i odbornici prokupačkog SDS napustili stranku i formirali grupu gradjana od 05.12.2016 godine  )*</b>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-edit"></i></span>
-                            <textarea rows="5" type="text" class="form-control" id="promena" name="promena" value="" placeholder="Promena">Članovi i odbornici prokupačkog SDS napustili stranku i formirali grupu gradjana od 05.12.2016 godine </textarea>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12">
-                    <div class="form-group">
-                        <b>Mesto / link / publikacija na kome se mogu potvrditi vase tvrdnje</b>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-edit"></i></span>
-                            <input type="text" class="form-control" id="potvrda" name="potvrda" autocomplete="off" value="google.rs" placeholder="">
-                        </div>
-                    </div>
-                </div>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><!-- Ko je na vlasti ikonica --></a>
             </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="vert-pad">
-                        <button id="editAkter" type="submit" class="btn btn-block btn-md btn-primary ">
-                            <i class="fa fa-edit"></i>Pošalji promenu
-                        </button>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Početna</a></li>
+                    <!-- <li><a href="partials/uporedjivanje.html">Upoređivanje opstina</a></li> -->
+                    <li><a href="partials/tabela.html">Tabele sa podacima</a></li>
+                    <li class="active"><a href="posaljitePromenu.html">Prijavi promenu</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+    <section class="container">
+        <div id="formpage">
+            <h3>Pošalji promenu</h3>
+            <p>Koristeci ovu formu mozete poslati zahtev za promenu odredjen informacije <b>ukoliko smatrate da ona nije istinita</b>.</p>
+            <p>Prilikom slanja zahteva molimo vas da obavezno obratite paznju na sledece</p>
+            <p>
+                <ul>
+                    <li>Obavezno ostavite <b>e-mail adresu</b> ukoliko zelite da vas obavestimo o uspesnoj promeni</li>
+                    <li>Obavezno navedite <b>osobu ili stranku</b> na koju se promena odnosi kao i <b>opstinu</b> na kojoj je potrebno izvsriti promenu</li>
+                    <li>Obavezno navedite link ili mesto na kome mozemoda verifikujemo promenu. <b>Bez verifikacije ni jedna promena nece biti izvrsena</b>.</li>
+                </ul>
+                <b>Zahvaljujemo vam na vasoj posvecenosti</b>
+            </p>
+            <div id="form-alerts"></div>
+            <div id="userfrosting-alerts"></div>
+            <form name="posaljiPromenuForm" method="post" id="posaljiPromenuForm" action="">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <b>Vaš predlog je u vezi sa (unesite ime osobe ili stranke)*</b>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-edit"></i></span>
+                                <input type="text" class="form-control" id="akter" name="akter" autocomplete="off" value="Petar" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <b>Na opštini? (unesite opštinu na kojoj deluje osoba ili stranka)* </b>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-edit"></i></span>
+                                <input type="text" class="form-control" id="opstina" name="opstina" autocomplete="off" value="Mladenovac" placeholder="Opština">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <b>Vasa e-mail adresa*</b>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-edit"></i></span>
+                                <input type="text" class="form-control" id="email" name="email" autocomplete="off" value="trt@mrt.com" placeholder="E-mail">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <b>Promena koju ste primetili (npr. Članovi i odbornici prokupačkog SDS napustili stranku i formirali grupu gradjana od 05.12.2016 godine  )*</b>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-edit"></i></span>
+                                <textarea rows="5" type="text" class="form-control" id="promena" name="promena" value="" placeholder="Promena">Članovi i odbornici prokupačkog SDS napustili stranku i formirali grupu gradjana od 05.12.2016 godine </textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <b>Mesto / link / publikacija na kome se mogu potvrditi vase tvrdnje</b>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-edit"></i></span>
+                                <input type="text" class="form-control" id="potvrda" name="potvrda" autocomplete="off" value="google.rs" placeholder="">
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <input type="hidden" name="csrf_token" value="5bce0da3797b538d67896c312e9a98cfd60e9afd2e84bb66aaf0ec2b725c0fb647916734d66d2eaf773171a9c7562189f10e9a76bb0bd1cdeab08f4caf3804a9">
-        </form>
-        <div class="clearfix"></div>
-    </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="vert-pad">
+                            <button id="editAkter" type="submit" class="btn btn-block btn-md btn-primary ">
+                                <i class="fa fa-edit"></i>Pošalji promenu
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" name="csrf_token" value="5bce0da3797b538d67896c312e9a98cfd60e9afd2e84bb66aaf0ec2b725c0fb647916734d66d2eaf773171a9c7562189f10e9a76bb0bd1cdeab08f4caf3804a9">
+            </form>
+            <div class="clearfix"></div>
+        </div>
+    </section>
     <script src="http://kojenavlasti.rs/admin/js/jquery-1.11.2.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script>

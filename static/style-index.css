@@ -1,5 +1,10 @@
-#mapa {
-    text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    /* or http://lea.verou.me/css3patterns/ */
+    background: url("body-bg.jpg") !important;
+    height: 100%;
+    font-family: "Roboto", sans-serif;
 }
 
 .pomeren {
@@ -18,8 +23,108 @@
     margin: 50px 0;
 }
 
+/*NAVBAR*/
+.navbar-nav {
+	margin: 0 auto;
+	float: none;
+	display: table;
+}
 .prijavi {
-    position: absolute;
-    right: 20%;
-    top: 15%;
+	color: #fff;
+	background-color: #d9534f;
+	border-color: #d43f3a;
+}
+.prijavi a {
+	color: #fff !important;
+}
+@media screen and (max-width: 768px) {
+	.navbar-nav {
+		margin: 7.5px -15px;
+		display: block;
+	}
+}
+
+/*MAPA*/
+#mapa {
+    text-align: center;
+}
+#mapa:hover {
+	cursor: pointer;
+}
+#mapa svg {
+    transform-origin: 0px 0px;
+    transform: scale(1.4);
+}
+@media screen and (max-width: 1400px) {
+	#mapa svg {
+		transform: scale(1.2);
+	}
+}
+@media screen and (max-width: 1199px) {
+	#mapa {
+		text-align: left;
+		padding-left: 80px;
+	}
+	#mapa svg {
+		transform: scale(1);
+	}
+}
+@media screen and (max-width: 620px) {
+	#mapa {
+		height: 460px;
+		text-align: center;
+		padding: 0;
+	}
+	#mapa svg {
+		transform: scale(0.6);
+		transform-origin: 100px 0px;
+	}
+}
+
+/*FORMA*/
+#indikator div.col-md-4 {
+	min-width: 200px;
+}
+div.awesomplete {
+	display: block !important;
+}
+/*OPIS*/
+#opis {
+    margin-top: 100px;
+}
+@media screen and (max-width: 1199px) {
+	#opis {
+		position: fixed;
+	    top: 0;
+	    right: 0;
+	    background: rgba(255, 255, 255, 0.5);
+	}
+}
+
+/*DATA TABLES*/
+.buttons-copy, .buttons-excel, .buttons-csv, .buttons-pdf {
+    padding: 6px 12px !important;
+    line-height: 1.42857143 !important;
+    color: #777 !important;
+    background-color: #fff !important;
+    border: 1px solid #ddd !important;
+    background-image: none !important;
+    font-size: 14px !important;
+    margin: 0 !important;
+    margin-left: -1px !important;
+}
+.buttons-copy {
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+.buttons-pdf {
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+.buttons-copy:hover, .buttons-excel:hover, .buttons-csv:hover, .buttons-pdf:hover {
+	background: rgba(255,255,255,0.5) !important;
+}
+.dataTables_info {
+	float: left;
+	font-size: 14px;
 }
