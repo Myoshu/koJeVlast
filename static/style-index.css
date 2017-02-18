@@ -88,6 +88,7 @@ body {
 div.awesomplete {
 	display: block !important;
 }
+
 /*OPIS*/
 #opis {
     margin-top: 100px;
@@ -97,7 +98,9 @@ div.awesomplete {
 		position: fixed;
 	    top: 0;
 	    right: 0;
-	    background: rgba(255, 255, 255, 0.5);
+	}
+	.table-striped>tbody>tr:nth-of-type(even) {
+		background: rgba(255, 255, 255, 0.5);
 	}
 }
 
